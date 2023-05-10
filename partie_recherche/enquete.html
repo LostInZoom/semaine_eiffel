@@ -19,17 +19,41 @@
     <title>Se repérer sur une carte</title>
   </head>
   <body>
-    <h2>Carte</h2>
     
     <div id="map" class="map">
       
     </div>
     <div id="but">
 
-      merci de renseigner le numéro donner par l'autre personne :
-      <input id="valeur_input" type="text" value='0'>
-      
-      <button id="E1">Commencer</button>
+      <div>
+        <label for="valeur_input">merci de renseigner le numéro donner par l'autre personne :</label>
+        <input id="valeur_input" type="text" value='0'>
+
+      </div>
+      <div>
+        <p>scénario :</p>
+
+
+        <input type="radio" id="A" name="scenario" value="A" checked > 
+        <label for="A">A</label>
+
+        <input type="radio" id="B" name="scenario" value="B" >
+        <label for="B">B</label>
+
+        <input type="radio" id="C" name="scenario" value="C" >
+        <label for="C">C</label>
+
+        <input type="radio" id="D" name="scenario" value="D" >
+        <label for="D">D</label>
+
+      </div>
+
+
+
+    
+
+      <button  id="E1" >Commencer</button>
+
     </div>
     
 
