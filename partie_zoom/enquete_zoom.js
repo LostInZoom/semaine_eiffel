@@ -177,7 +177,7 @@ var eiffel_agregation_total = new ol.layer.Tile({ source: source_eiffel_agregati
 
     etape = 0;
     scenario = liste_scenario[0];    
-    alert('Blabla cosnetement' +' Merci de donner le numéro ' +etape +" et la lettre "+scenario)
+    alert('Blabla consentement' +' Merci de donner le numéro ' +etape +" et la lettre "+scenario)
     zoom = data[etape]["zoom"];
     centre = ol.proj.fromLonLat(data[etape]["center"]);
 
