@@ -177,7 +177,7 @@ var eiffel_agregation_total = new ol.layer.Tile({ source: source_eiffel_agregati
 
     etape = 0;
     scenario = liste_scenario[0];    
-    alert('balbal cosnetement' +' Merci de donner le numéro ' +etape +" et la lettre "+scenario)
+    alert('Blabla cosnetement' +' Merci de donner le numéro ' +etape +" et la lettre "+scenario)
     zoom = data[etape]["zoom"];
     centre = ol.proj.fromLonLat(data[etape]["center"]);
 
@@ -195,7 +195,7 @@ var eiffel_agregation_total = new ol.layer.Tile({ source: source_eiffel_agregati
     });
     map.addLayer(liste_epingle[0])
   
-    var r='<input id="etape_suivante" type="button" value="Etape suivante">';
+    var r='<input id="etape_suivante" type="button" value="Personne suivante">';
 
     $("#but").append(r);
 
