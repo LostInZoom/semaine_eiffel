@@ -105,5 +105,5 @@ function connexion_pool(valeur){
 app.use(express.static('.'));
 
 app.get('/', (req, res) => {
-    res.sendFile('./enquete.html');
+    res.sendFile('./index.html');
 })
