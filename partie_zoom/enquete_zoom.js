@@ -98,12 +98,15 @@ var source_eiffel_agregation_total = new ol.source.TileWMS({
 /* Déclaration de la couche WMS */
 var eiffel_agregation_total = new ol.layer.Tile({ source: source_eiffel_agregation_total});
 
-
-  const style = new ol.style.Style({
+var style_point = new ol.style.Style({
+  image: new ol.style.Circle({
+    radius: 5,
     fill: new ol.style.Fill({
-      color: '#eeeeee',
+      color: 'blue',
     }),
-  });
+  })
+})
+
 
 
 
@@ -116,7 +119,8 @@ var eiffel_agregation_total = new ol.layer.Tile({ source: source_eiffel_agregati
                   geometry: new ol.geom.Point(ol.proj.fromLonLat(data[i]["center"]))
               })
           ]
-      })
+      }),
+      style : style_point
     }))
   }
   document.getElementById("E1").onclick = function() {debut()};

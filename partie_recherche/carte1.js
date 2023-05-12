@@ -159,6 +159,15 @@ function fin(){
 }
 
 
+  var style_line = new ol.style.Style({
+    stroke: new ol.style.Stroke({
+      color: 'blue',
+      width: 3,
+    })
+
+  })
+
+
 var line = new ol.layer.Vector({
   source: new ol.source.Vector({
       features: [
@@ -166,7 +175,8 @@ var line = new ol.layer.Vector({
               geometry: new ol.geom.LineString(coord_line)
           })
       ]
-  })
+  }),
+  style : style_line
 });
 
 
@@ -180,14 +190,15 @@ function ajout(){
 }
 
 
-function etape2(){
+function etape2(){ 
   but.removeChild(document.getElementById("etape2"));
   etape +=1;
   raster.setVisible(!raster.getVisible());
   eiffel_agregation_surfacique.setVisible(!eiffel_agregation_surfacique.getVisible());  
   eiffel_agregation_ponctuel.setVisible(!eiffel_agregation_ponctuel.getVisible());  
   eiffel_agregation_total.setVisible(!eiffel_agregation_total.getVisible());  
-
+  map.getView().setCenter(ol.proj.fromLonLat([2.3383,48.8848]));
+  map.getView().setZoom(zoom_couche);
   setTimeout(fin,120000)
   interval = setInterval(ajout, 100) ;
   map.addLayer(line)
