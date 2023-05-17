@@ -38,6 +38,35 @@ var data = [
   var map;
   var liste_scenario = ["A","B","C","D"];
   var etape_lettre = 0;
+
+
+
+form ="J'accepte de participer à une étude dont l'objectif est de  récolter des données afin d'observer la manière dont l'utilisateur se repére, en zoomant ou  dézoomant sur une carte.\n"
+form += " Les points suivants m'ont été expliqués :\n"
+    
+form +=   "Je comprends que les résultats de cette expérience peuvent être utilisées dans des publications. Je reconnais les avantages dont je pourrais profiter au terme de cette expérience :\n"
+
+ form +=    "Un aperçu des recherches sur la cartographie multi-échelle.\n"
+ form +=    "Une opportunité de contribuer aux travaux de recherche.\n"
+ form +=   "Une opportunité d'en apprendre davantage concernant la manière de se repérer sur une carte.\n"
+
+  
+  
+  form += "La procédure sera la suivante :\n"
+    
+  form +=  "Je vais avoir accès à une carte et essayer de faire trouver à une seconde personne un lieu précis."
+
+  form += "Les chercheurs et les chercheuses ne prévoient aucun risques  pour ma participation à cette expérience, ils ne s'attendent  pas non plus à ce que je sois confronté.e à quelque inconfort ou   stress.\n"
+
+  form += "Je comprends que je peux me rétracter de cette expérience à tout moment\n"
+  
+  form += "Je comprends que je recevrai une copie du présent formulaire si j'en fais la demande.\n"
+  
+  
+  form +="Cette expérience respecte le RGPD (contacter dpo@ign.fr pour toute question concernant le RGPD).\n"
+  form += "Pour toute question concernant cette expérience ou le projet LostInZoom, vous pouvez contacter Guillaume Touya.\n"
+
+
   // initialisation des fond de carte OSM et géoportail 
 var raster = new ol.layer.Tile({
   // Preload infinity c'est pour éviter d'avoir des espaces blancs quand tu navigues sur la carte,
@@ -181,7 +210,7 @@ var style_point = new ol.style.Style({
 
     etape = 0;
     scenario = liste_scenario[0];    
-    alert('Blabla consentement' +' Merci de donner le numéro ' +etape +" et la lettre "+scenario)
+    alert(' Merci de donner le numéro ' +etape +" et la lettre "+scenario +" \n"+form )
     zoom = data[etape]["zoom"];
     centre = ol.proj.fromLonLat(data[etape]["center"]);
 
