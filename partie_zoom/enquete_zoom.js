@@ -195,7 +195,7 @@ var style_point = new ol.style.Style({
     }
    
 
-    alert('Merci de donner le numéro ' +etape +" et la lettre "+scenario)
+    alert(' Merci de donner le numéro ' +etape +" et la lettre "+scenario +" \n"+form )
     map.addLayer(liste_epingle[etape])
     console.log(etape)
     centre = ol.proj.fromLonLat(data[etape]["center"]);
